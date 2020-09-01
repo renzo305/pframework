@@ -1,5 +1,5 @@
 import unittest
-
+from chromedriver_py import binary_path
 import allure
 from allure_commons.types import AttachmentType
 from locators import *
@@ -17,7 +17,7 @@ class createEmail(unittest.TestCase, Keywords):
     def setUp(self):
         self.options = webdriver.ChromeOptions()
         self.options.add_argument("--incognito")
-        self.driver = webdriver.Chrome(executable_path="\Chromedriver\chromedriver.exe", options=self.options)
+        self.driver = webdriver.Chrome(executable_path=binary_path, options=self.options)
         self.options.add_argument('--ignore-certificate-errors')
         self.options.add_argument("--test-type")
         self.driver.maximize_window()

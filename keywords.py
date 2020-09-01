@@ -1,4 +1,5 @@
 from selenium import webdriver
+from chromedriver_py import binary_path
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
@@ -6,7 +7,7 @@ class Keywords:
     def setUp(self):
         self.options = webdriver.ChromeOptions()
         self.options.add_argument("--incognito")
-        self.driver = webdriver.Chrome(executable_path="D:\Chromedriver\chromedriver.exe", options=self.options)
+        self.driver = webdriver.Chrome(executable_path=binary_path, options=self.options)
 
 
     def inputText(self, fieldXpath):

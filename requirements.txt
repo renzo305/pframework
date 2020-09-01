@@ -4,6 +4,7 @@ allure-python-commons==2.8.18
 atomicwrites==1.4.0
 attrs==20.1.0
 behave==1.2.6
+chromedriver-py==85.0.4183.87
 colorama==0.4.3
 htmlrunner==0.13
 iniconfig==1.0.1
